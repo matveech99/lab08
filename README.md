@@ -1,6 +1,6 @@
 Какая работа была проделана:
 Переход в рабочую директорию, сохранение текущего пути (pushd), активация окружения (например, переменных среды).
-Копирование lab06 в lab07, смена URL репозитория.
+Копирование lab06 в lab08, смена URL репозитория.
 Добавление Hunter в проект для управления зависимостями (Gtest).
 Удаление встроенного GTest, замена на версию через Hunter.
 Конфигурация, сборка и запуск тестов.
@@ -20,17 +20,17 @@
 > pushd .
 ~/matveech99/workspace ~
 > source scripts/activate
-> git clone https://github.com/${GITHUB_USERNAME}/lab06 projects/lab07
-Клонирование в «projects/lab07»...
+> git clone https://github.com/${GITHUB_USERNAME}/lab06 projects/lab08
+Клонирование в «projects/lab08»...
 remote: Enumerating objects: 219, done.
 remote: Counting objects: 100% (219/219), done.
 remote: Compressing objects: 100% (119/119), done.
 remote: Total 219 (delta 78), reused 213 (delta 75), pack-reused 0 (from 0)
 Получение объектов: 100% (219/219), 1.25 МиБ | 3.72 МиБ/с, готово.
 Определение изменений: 100% (78/78), готово.
-> cd projects/lab07
+> cd projects/lab08
 > git remote remove origin
-> git remote add origin https://github.com/${GITHUB_USERNAME}/lab07
+> git remote add origin https://github.com/${GITHUB_USERNAME}/lab08
 > mkdir -p cmake
 > wget https://raw.githubusercontent.com/cpp-pm/gate/master/cmake/HunterGate.cmake -O cmake/HunterGate.cmake
 --2025-05-01 11:40:43--  https://raw.githubusercontent.com/cpp-pm/gate/master/cmake/HunterGate.cmake
@@ -782,8 +782,8 @@ Call Stack (most recent call first):
 -- [hunter] GTEST_ROOT: /home/matvey/.hunter/_Base/23f1b5a/fb15dbb/bf2be25/Install (ver.: 1.11.0)
 -- Configuring done (0.6s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab07/_builds
-~/m/workspace/p/lab07 main +2 !1 ?2 >     
+-- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab08/_builds
+~/m/workspace/p/lab08 main +2 !1 ?2 >     
 
 
 
@@ -801,7 +801,7 @@ Call Stack (most recent call first):
 [100%] Built target check
 > cmake --build _builds --target test
 Running tests...
-Test project /home/matvey/matveech99/workspace/projects/lab07/_builds
+Test project /home/matvey/matveech99/workspace/projects/lab08/_builds
     Start 1: check
 1/1 Test #1: check ............................   Passed    0.00 sec
 
@@ -813,7 +813,7 @@ Total Test time (real) =   0.00 sec
 drwxrwxr-x  3 matvey matvey 4096 мая  1 12:10 .
 drwxr-x--- 29 matvey matvey 4096 мая  1 12:17 ..
 drwxrwxr-x  6 matvey matvey 4096 мая  1 12:10 _Base
-~/m/workspace/p/lab07 main +2 !1 ?2 >
+~/m/workspace/p/lab08 main +2 !1 ?2 >
 > git clone https://github.com/cpp-pm/hunter $HOME/projects/hunter
 Клонирование в «/home/matvey/projects/hunter»...
 remote: Enumerating objects: 54405, done.
@@ -1127,8 +1127,8 @@ loading initial cache file /home/matvey/projects/hunter/_Base/xxxxxxx/fb15dbb/cf
 -- Found GTest: /home/matvey/projects/hunter/_Base/xxxxxxx/fb15dbb/cf272be/Install/lib/cmake/GTest/GTestConfig.cmake (found version "1.15.2")  
 -- Configuring done (18.3s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab07/_builds
-~/m/workspace/p/lab07 main +2 !1 ?2 >
+-- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab08/_builds
+~/m/workspace/p/lab08 main +2 !1 ?2 >
 
 
 > cmake --build _builds
@@ -1140,14 +1140,14 @@ loading initial cache file /home/matvey/projects/hunter/_Base/xxxxxxx/fb15dbb/cf
 [100%] Built target check
 > cmake --build _builds --target test
 Running tests...
-Test project /home/matvey/matveech99/workspace/projects/lab07/_builds
+Test project /home/matvey/matveech99/workspace/projects/lab08/_builds
     Start 1: check
 1/1 Test #1: check ............................   Passed    0.00 sec
 
 100% tests passed, 0 tests failed out of 1
 
 Total Test time (real) =   0.00 sec
-~/m/workspace/p/lab07 main +2 !1 ?2 >           
+~/m/workspace/p/lab08 main +2 !1 ?2 >           
 > cat $HUNTER_ROOT/cmake/configs/default.cmake | grep GTest
   hunter_default_version(GTest VERSION 1.7.0-hunter-6)
   hunter_default_version(GTest VERSION 1.15.2)
@@ -1503,7 +1503,7 @@ hunter_download(PACKAGE_NAME GTest PACKAGE_INTERNAL_DEPS_ID 1)
 > cat > cmake/Hunter/config.cmake <<EOF
 hunter_config(GTest VERSION 1.7.0-hunter-9)
 EOF
-~/m/workspace/p/lab07 main +2 !1 ?2 >    
+~/m/workspace/p/lab08 main +2 !1 ?2 >    
 > mkdir demo
 > cat > demo/main.cpp <<EOF
 #include <print.hpp>
@@ -1535,7 +1535,7 @@ EOF
 [sudo] пароль для matvey: 
 E: Неверная операция clang
 > git submodule add https://github.com/ruslo/polly tools/polly
-Клонирование в «/home/matvey/matveech99/workspace/projects/lab07/tools/polly»...
+Клонирование в «/home/matvey/matveech99/workspace/projects/lab08/tools/polly»...
 remote: Enumerating objects: 6578, done.
 remote: Counting objects: 100% (32/32), done.
 remote: Compressing objects: 100% (15/15), done.
@@ -1544,13 +1544,13 @@ remote: Total 6578 (delta 21), reused 20 (delta 17), pack-reused 6546 (from 1)
 Определение изменений: 100% (4551/4551), готово.
 > tools/polly/bin/polly.py --test
 Python version: 3.12
-Build dir: /home/matvey/matveech99/workspace/projects/lab07/_builds/default
+Build dir: /home/matvey/matveech99/workspace/projects/lab08/_builds/default
 Execute command: [
   `which`
   `cmake`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "which" "cmake"
+[/home/matvey/matveech99/workspace/projects/lab08]> "which" "cmake"
 
 /usr/bin/cmake
 Execute command: [
@@ -1558,7 +1558,7 @@ Execute command: [
   `--version`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "--version"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "--version"
 
 cmake version 3.28.3
 
@@ -1566,11 +1566,11 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake).
 Execute command: [
   `cmake`
   `-H.`
-  `-B/home/matvey/matveech99/workspace/projects/lab07/_builds/default`
-  `-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab07/tools/polly/default.cmake`
+  `-B/home/matvey/matveech99/workspace/projects/lab08/_builds/default`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab08/tools/polly/default.cmake`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "-H." "-B/home/matvey/matveech99/workspace/projects/lab07/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab07/tools/polly/default.cmake"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "-H." "-B/home/matvey/matveech99/workspace/projects/lab08/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab08/tools/polly/default.cmake"
 
 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
@@ -1601,15 +1601,15 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
 -- Found GTest: /home/matvey/projects/hunter/_Base/xxxxxxx/fb15dbb/cf272be/Install/lib/cmake/GTest/GTestConfig.cmake (found version "1.15.2")
 -- Configuring done (0.7s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab07/_builds/default
+-- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab08/_builds/default
 Execute command: [
   `cmake`
   `--build`
-  `/home/matvey/matveech99/workspace/projects/lab07/_builds/default`
+  `/home/matvey/matveech99/workspace/projects/lab08/_builds/default`
   `--`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "--build" "/home/matvey/matveech99/workspace/projects/lab07/_builds/default" "--"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "--build" "/home/matvey/matveech99/workspace/projects/lab08/_builds/default" "--"
 
 [ 25%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
 [ 50%] Linking CXX static library libprint.a
@@ -1622,7 +1622,7 @@ Execute command: [
   `ctest`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07/_builds/default]> "ctest"
+[/home/matvey/matveech99/workspace/projects/lab08/_builds/default]> "ctest"
 
 *********************************
 No test configuration file found!
@@ -1632,7 +1632,7 @@ Usage
   ctest [options]
 
 -
-Log saved: /home/matvey/matveech99/workspace/projects/lab07/_logs/polly/default/log.txt
+Log saved: /home/matvey/matveech99/workspace/projects/lab08/_logs/polly/default/log.txt
 -
 Generate: 0:00:01.721082s
 Build: 0:00:01.404698s
@@ -1643,14 +1643,14 @@ Total: 0:00:03.132457s
 SUCCESS
 > tools/polly/bin/polly.py --install --clear
 Python version: 3.12
-Build dir: /home/matvey/matveech99/workspace/projects/lab07/_builds/default
-Remove directory: /home/matvey/matveech99/workspace/projects/lab07/_builds/default
+Build dir: /home/matvey/matveech99/workspace/projects/lab08/_builds/default
+Remove directory: /home/matvey/matveech99/workspace/projects/lab08/_builds/default
 Execute command: [
   `which`
   `cmake`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "which" "cmake"
+[/home/matvey/matveech99/workspace/projects/lab08]> "which" "cmake"
 
 /usr/bin/cmake
 Execute command: [
@@ -1658,7 +1658,7 @@ Execute command: [
   `--version`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "--version"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "--version"
 
 cmake version 3.28.3
 
@@ -1666,12 +1666,12 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake).
 Execute command: [
   `cmake`
   `-H.`
-  `-B/home/matvey/matveech99/workspace/projects/lab07/_builds/default`
-  `-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab07/tools/polly/default.cmake`
-  `-DCMAKE_INSTALL_PREFIX=/home/matvey/matveech99/workspace/projects/lab07/_install/default`
+  `-B/home/matvey/matveech99/workspace/projects/lab08/_builds/default`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab08/tools/polly/default.cmake`
+  `-DCMAKE_INSTALL_PREFIX=/home/matvey/matveech99/workspace/projects/lab08/_install/default`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "-H." "-B/home/matvey/matveech99/workspace/projects/lab07/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab07/tools/polly/default.cmake" "-DCMAKE_INSTALL_PREFIX=/home/matvey/matveech99/workspace/projects/lab07/_install/default"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "-H." "-B/home/matvey/matveech99/workspace/projects/lab08/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab08/tools/polly/default.cmake" "-DCMAKE_INSTALL_PREFIX=/home/matvey/matveech99/workspace/projects/lab08/_install/default"
 
 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
@@ -1702,17 +1702,17 @@ CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
 -- Found GTest: /home/matvey/projects/hunter/_Base/xxxxxxx/fb15dbb/cf272be/Install/lib/cmake/GTest/GTestConfig.cmake (found version "1.15.2")
 -- Configuring done (0.9s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab07/_builds/default
+-- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab08/_builds/default
 Execute command: [
   `cmake`
   `--build`
-  `/home/matvey/matveech99/workspace/projects/lab07/_builds/default`
+  `/home/matvey/matveech99/workspace/projects/lab08/_builds/default`
   `--target`
   `install`
   `--`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "--build" "/home/matvey/matveech99/workspace/projects/lab07/_builds/default" "--target" "install" "--"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "--build" "/home/matvey/matveech99/workspace/projects/lab08/_builds/default" "--target" "install" "--"
 
 [ 25%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
 [ 50%] Linking CXX static library libprint.a
@@ -1722,14 +1722,14 @@ Execute command: [
 [100%] Built target demo
 Install the project...
 -- Install configuration: ""
--- Installing: /home/matvey/matveech99/workspace/projects/lab07/_install/default/lib/libprint.a
--- Installing: /home/matvey/matveech99/workspace/projects/lab07/_install/default/include
--- Installing: /home/matvey/matveech99/workspace/projects/lab07/_install/default/include/print.hpp
--- Installing: /home/matvey/matveech99/workspace/projects/lab07/_install/default/cmake/print-config.cmake
--- Installing: /home/matvey/matveech99/workspace/projects/lab07/_install/default/cmake/print-config-noconfig.cmake
--- Installing: /home/matvey/matveech99/workspace/projects/lab07/_install/default/bin/demo
+-- Installing: /home/matvey/matveech99/workspace/projects/lab08/_install/default/lib/libprint.a
+-- Installing: /home/matvey/matveech99/workspace/projects/lab08/_install/default/include
+-- Installing: /home/matvey/matveech99/workspace/projects/lab08/_install/default/include/print.hpp
+-- Installing: /home/matvey/matveech99/workspace/projects/lab08/_install/default/cmake/print-config.cmake
+-- Installing: /home/matvey/matveech99/workspace/projects/lab08/_install/default/cmake/print-config-noconfig.cmake
+-- Installing: /home/matvey/matveech99/workspace/projects/lab08/_install/default/bin/demo
 -
-Log saved: /home/matvey/matveech99/workspace/projects/lab07/_logs/polly/default/log.txt
+Log saved: /home/matvey/matveech99/workspace/projects/lab08/_logs/polly/default/log.txt
 -
 Generate: 0:00:01.915187s
 Build: 0:00:01.432174s
@@ -1891,13 +1891,13 @@ Thread model: posix
 InstalledDir: /usr/bin
 > tools/polly/bin/polly.py --toolchain clang-cxx14
 Python version: 3.12
-Build dir: /home/matvey/matveech99/workspace/projects/lab07/_builds/clang-cxx14
+Build dir: /home/matvey/matveech99/workspace/projects/lab08/_builds/clang-cxx14
 Execute command: [
   `which`
   `cmake`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "which" "cmake"
+[/home/matvey/matveech99/workspace/projects/lab08]> "which" "cmake"
 
 /usr/bin/cmake
 Execute command: [
@@ -1905,7 +1905,7 @@ Execute command: [
   `--version`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "--version"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "--version"
 
 cmake version 3.28.3
 
@@ -1913,12 +1913,12 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake).
 Execute command: [
   `cmake`
   `-H.`
-  `-B/home/matvey/matveech99/workspace/projects/lab07/_builds/clang-cxx14`
+  `-B/home/matvey/matveech99/workspace/projects/lab08/_builds/clang-cxx14`
   `-GUnix Makefiles`
-  `-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab07/tools/polly/clang-cxx14.cmake`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab08/tools/polly/clang-cxx14.cmake`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "-H." "-B/home/matvey/matveech99/workspace/projects/lab07/_builds/clang-cxx14" "-GUnix Makefiles" "-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab07/tools/polly/clang-cxx14.cmake"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "-H." "-B/home/matvey/matveech99/workspace/projects/lab08/_builds/clang-cxx14" "-GUnix Makefiles" "-DCMAKE_TOOLCHAIN_FILE=/home/matvey/matveech99/workspace/projects/lab08/tools/polly/clang-cxx14.cmake"
 
 CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
   Compatibility with CMake < 3.5 will be removed from a future version of
@@ -2190,15 +2190,15 @@ loading initial cache file /home/matvey/projects/hunter/_Base/xxxxxxx/71bad34/cf
 -- Found GTest: /home/matvey/projects/hunter/_Base/xxxxxxx/71bad34/cf272be/Install/lib/cmake/GTest/GTestConfig.cmake (found version "1.15.2")
 -- Configuring done (14.4s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab07/_builds/clang-cxx14
+-- Build files have been written to: /home/matvey/matveech99/workspace/projects/lab08/_builds/clang-cxx14
 Execute command: [
   `cmake`
   `--build`
-  `/home/matvey/matveech99/workspace/projects/lab07/_builds/clang-cxx14`
+  `/home/matvey/matveech99/workspace/projects/lab08/_builds/clang-cxx14`
   `--`
 ]
 
-[/home/matvey/matveech99/workspace/projects/lab07]> "cmake" "--build" "/home/matvey/matveech99/workspace/projects/lab07/_builds/clang-cxx14" "--"
+[/home/matvey/matveech99/workspace/projects/lab08]> "cmake" "--build" "/home/matvey/matveech99/workspace/projects/lab08/_builds/clang-cxx14" "--"
 
 [ 25%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
 [ 50%] Linking CXX static library libprint.a
@@ -2207,7 +2207,7 @@ Execute command: [
 [100%] Linking CXX executable demo
 [100%] Built target demo
 -
-Log saved: /home/matvey/matveech99/workspace/projects/lab07/_logs/polly/clang-cxx14/log.txt
+Log saved: /home/matvey/matveech99/workspace/projects/lab08/_logs/polly/clang-cxx14/log.txt
 -
 Generate: 0:00:15.382033s
 Build: 0:00:01.497794s
